@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Emergency</title>
+  <meta name="description"
+    content="Recipe emergency lets you find recipes by searching for the name of a meal or by searching for a main ingredient.">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/9d183035fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+    <a href="index.html" class="logo-nav">
+      <img src="Recipe_Emergency-removebg-preview.png"
+        alt="logo with a red varning triangel and the text 'recipe emergency'" id="logo"></a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="">Category</a></li>
+        <li><a href="favorite.html">Favorites</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!--Text innan sökfunktionen-->
+  <div class="search-text">
+    <h1 id="next-meal">Find your emergency recipe</h1>
+    <p class="header-quote">"Cooking Crisis? Turn to Recipe Emergency, Your Culinary 911!"</p>
+
+    <!--Sökfunktionen-->
+    <form class="form" role="search">
+      <input type="text" placeholder="Search for a recipe..." id="search-input">
+      <input type="submit" value="Search" id="search">
+    </form>
+  </div>
+
+  <!--Sökresultaten-->
+  <div class="search-result">
+  </div>
+
+  <div class="item-info-container">
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

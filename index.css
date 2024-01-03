@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+
+/*CSS för båda sidorna*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #141414;
+  width: 100vw;
+}
+
+header {
+  height: 100px;
+  background-color: #ffd900;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+nav li,
+nav li a {
+  display: inline-block;
+  padding: 0px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+#logo,
+.logo-nav {
+  width: 90px;
+  height: 90px;
+  margin-right: auto;
+}
+
+/*Stilsättning för texter ovanför sökfunktionen - index.html*/
+.search-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px;
+  height: 340px;
+  color: #ffffff;
+}
+
+#next-meal {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.header-quote {
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+/*Stilsättning för sökfunktionen - index.html*/
+#search-input {
+  justify-self: center;
+  text-align: center;
+  height: 40px;
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.692);
+  float: left;
+  width: 80%;
+}
+
+#search {
+  float: left;
+  width: 20%;
+  font-weight: 500;
+  height: 40px;
+  padding: 10px;
+  background: #ffd900;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.692);
+  border-left: none;
+}
+
+.form {
+  width: 700px;
+}
+
+/*Stilsättning för mina sökresultat - index.html*/
+img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.search-result {
+  padding-left: 6%;
+  padding-right: 6%;
+  justify-content: center;
+  display: grid;
+  grid-gap: 50px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.recipe-item {
+  width: 100%;
+  height: 450px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ffd900;
+  border-radius: 12px;
+  box-shadow: 1px 1px 5px black, -1px -1px 5px black;
+  margin: 20px 0px 12px 0px;
+}
+
+.meal-card {
+  display: grid;
+  justify-items: center;
+  height: 150px;
+  grid-area: 1 /1 / 1 /1;
+  justify-content: center;
+}
+
+.recipe-name {
+  margin-top: 5px;
+  margin-bottom: -30px;
+  font-size: 1.3rem;
+  flex-grow: 1;
+  height: 80px;
+  text-align: center;
+}
+
+.recipe-link {
+  justify-self: center;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 2px solid black;
+}
+
+/*Stilsättning för den utökade informationen - båda sidorna*/
+.item-info {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffd900;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0), -1px -1px 5px rgb(8, 0, 0);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 35% 1fr 8%;
+  grid-template-rows: 110px 50px 42% 15% 60px;
+  grid-template-areas:
+    "name name button"
+    "img instructiontitel instructiontitel"
+    "img instructions instructions"
+    "catcontainer instructions instructions"
+    "link link link";
+  width: 70%;
+  max-width: 1000px;
+  height: 700px;
+}
+
+.item-info-button {
+  grid-area: button;
+  height: 35px;
+  margin-top: 5px;
+  width: 50px;
+  color: red;
+  background-color: #141414;
+  border-radius: 12px;
+  border: 1px solid black;
+  box-shadow: 0 4px 6px 0 rgb(14, 13, 13);
+  font-weight: 600;
+}
+.item-info-cat-container {
+  grid-area: catcontainer;
+  font-size: 1.2rem;
+}
+
+.item-info-name {
+  grid-area: name;
+  font-size: 1.8rem;
+  padding: 5px;
+  margin-top: 10px;
+  height: 100px;
+}
+
+.item-info-img {
+  grid-area: img;
+  width: 300px;
+  margin-top: 59px;
+  box-shadow: 0 5px 7px 0 rgb(14, 13, 13);
+  border: 3px solid black;
+}
+
+.item-info-instructiontitel {
+  grid-area: instructiontitel;
+  font-size: 1.5rem;
+}
+
+.item-info-instructions {
+  grid-area: instructions;
+  padding: 5px;
+  font-weight: 500;
+  overflow-y: scroll;
+}
+
+.item-info-link {
+  width: 200px;
+  height: 40px;
+  color: red;
+  background-color: #141414;
+  font-weight: bold;
+  margin-left: 280%;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 7px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid black;
+  box-shadow: 0 4px 6px 0 rgb(14, 13, 13);
+}
+
+.log-button {
+  width: 200px;
+  height: 40px;
+  color: red;
+  background-color: #141414;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid black;
+  box-shadow: 0 4px 6px 0 rgb(14, 13, 13);
+}
+
+/*Stilsättning för favoritknapparna - båda sidorna*/
+.fa-heart {
+  width: 20px;
+  height: 15px;
+  color: red;
+  background-color: black;
+}
+
+.fav-button-clicked,
+.fav-button {
+  background-color: black;
+  border-radius: 4px;
+}
+
+/*Stilsättning för chart - favorite.html*/
+.category-chart {
+  color: #ffffff;
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.chart-box {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+  background-color: #ffd900;
+  display: none;
+}
+
+.fa-x {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  color: red;
+  font-size: 1rem;
+  padding-top: 3px;
+  background-color: black;
+}
+.close-chart {
+  display: none;
+  margin-left: auto;
+  background-color: black;
+  border-radius: 4px;
+}
+
+/*Stilsättning för favorite.html*/
+.favorite-list {
+  margin-top: 40px;
+  height: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.fav-item {
+  padding-left: 6%;
+  padding-right: 6%;
+  justify-content: center;
+  display: grid;
+  grid-gap: 50px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/*Stilsättning för hover effects*/
+.item-info-button:hover,
+.log-button:hover,
+.item-info-link:hover {
+  transform: scale(1.06);
+  box-shadow: 4px 3px 8px 0 rgb(255, 0, 0);
+}
+
+nav li a:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+/*Media Queries - båda sidorna*/
+
+@media (max-width: 780px) {
+  body {
+    max-width: 100vw; /*FÄRDIG*/
+  }
+
+  nav li,
+  nav li a {
+    display: flex; /*FÄRDIG*/
+  }
+
+  #logo,
+  .logo-nav {
+    width: 80px;
+    height: 80px; /*FÄRDIG*/
+  }
+
+  /*Header texter*/
+  .search-text {
+    padding-top: 20%; /*FÄRDIG*/
+  }
+
+  .header-quote {
+    width: 90%;
+    text-align: center; /*FÄRDIG*/
+  }
+
+  /*Sök funktionen*/
+  #search-input {
+    font-size: 15px; /*FÄRDIG*/
+    width: 70%;
+  }
+
+  #search {
+    width: 30%; /*FÄRDIG*/
+    font-size: 15px;
+  }
+
+  .form {
+    width: 90%; /*FÄRDIG*/
+    max-width: 500px;
+  }
+
+  #next-meal {
+    font-size: 2rem;
+    text-align: center; /*FÄRDIG*/
+  }
+
+  /*Sökresultaten*/
+  .recipe-item {
+    max-width: 400px;
+    margin: 15px auto 8px auto; /*FÄRDIG*/
+  }
+
+  /*Item Information*/
+  .item-info {
+    width: 90%;
+    margin-top: 10%;
+    grid-template-columns: 50% 1fr 20%;
+    grid-template-rows: 90px 50px 40% minmax(20%, 1fr) 60px;
+    grid-template-areas:
+      "name name button"
+      "img instructiontitel instructiontitel"
+      "img instructions instructions"
+      "catcontainer instructions instructions"
+      "link link link";
+    height: 70%;
+    max-height: 600px;
+  }
+
+  .item-info-cat-container {
+    font-size: 1rem;
+  }
+
+  .item-info-name {
+    font-size: 1.5rem;
+  }
+
+  .item-info-img {
+    width: 90%;
+    height: 90%;
+    margin-top: 9px;
+  }
+
+  .item-info-instructiontitel {
+    font-size: 1.2rem;
+  }
+
+  .item-info-instructions {
+    padding: 2px;
+    font-size: 0.9rem;
+  }
+
+  .item-info-link {
+    width: 180px;
+    height: 40px;
+    margin-left: 100%;
+    margin-top: 4%;
+  }
+
+  /*Favoritsidan*/
+  .favorite-list {
+    font-size: 0.9rem;
+  }
+
+  /*CHART*/
+  .category-chart {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 780px) and (max-width: 1280px) {
+  .item-info {
+    width: 90%;
+    margin-top: 3%;
+  }
+
+  .item-info-img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .item-info-link {
+    margin-top: 10%;
+  }
+}

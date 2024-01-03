@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Emergency - Favorites</title>
+  <meta name="description" content="Recipe emergency favorite list. Where your favorite recipes get stored.">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://kit.fontawesome.com/9d183035fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo-nav"><img src="Recipe_Emergency-removebg-preview.png"
+        alt="logo with a red varning triangel and the text 'recipe emergency'" id="logo"></a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="">Category</a></li>
+        <li><a href="favorite.html">Favorites</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="favorite-list">
+    <h1>Favorite Recipes</h1>
+  </div>
+  <div class="category-chart">
+    <h2 class="category-chart">Category Chart</h2>
+  </div>
+
+  <div class="chart-box">
+    <button class="close-chart"><i class="fa-solid fa-x"></i></button>
+    <canvas id="myChart"></canvas>
+  </div>
+
+
+  <div class="fav-item">
+  </div>
+
+  <div class="item-info-container">
+  </div>
+
+  <script src="favorite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
